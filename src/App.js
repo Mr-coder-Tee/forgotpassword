@@ -14,7 +14,7 @@ function App() {
       <Route path="/" element={<Navigate to={`resetpassword/`} replace={true}/>}/>
       {/* <Route  path="/resetpassword" element={<Reset />} /> */}
       <Route  path="/resetpassword"  >
-      <Route  path="/:d" element={<Reset />} />
+      <Route  path="/:id" element={<Reset />} />
         
         </Route>
 
