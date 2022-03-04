@@ -4,19 +4,18 @@ import { BrowserRouter, Routes, Route,Navigate,useParams  } from "react-router-d
 import Reset from './cmpts/Reset';
 
 function App() {
-  // const location = useLocation();
-  // const path = location.pathname;
-// console.log('path',path)
-const [r,setr]=useState(false)
+  
   return (
    
+    <BrowserRouter>
     <div className="App">
-     {
-       r?(<div>
-         <h1>Password reseted</h1>
-       </div>):(<Reset setr={setr}/>)
-     }
+      <Routes>
+      <Route path="/" element={<Navigate to={`/resetpassword/1`} replace={true}/>}/>
+      {/* <Route   path="/" element={<Reset />}/> */}
+      <Route exact path="/resetpassword/:id" element={<Reset />} />
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 

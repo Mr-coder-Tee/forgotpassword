@@ -14,7 +14,13 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-const Reset = () => {
+import axios from "axios";
+import { useParams } from "react-router-dom";
+
+
+const Reset = ({setr}) => {
+    const {id} = useParams();
+  // const path = location.pathname;
   const [values, setValues] = React.useState({
     password: "",
     showPassword: false,
@@ -29,9 +35,14 @@ const Reset = () => {
     } else if (values.password != values.confirmpassword) {
         setError("password dont match")
     } else {
-        const url="https://peace-hotel-app.herokuapp.com/"
-        setError()
-        setr(true)
+        const url=`https://peace-hotel-app.herokuapp.com/user/passwordreset/${id}`
+        axios.get(url).then((res)=>{
+            console.log(res)
+            setError()
+            setr(true)
+        }).catch((error)=>{
+            console.log(error)
+        })
     }
   };
   const handleClickShowPassword = () => {
@@ -135,7 +146,7 @@ const Reset = () => {
             label="confirmPassword"
           />
         </FormControl>
-        <Button variant="contained">Reset password</Button>
+        <Button onClick={submit} variant="contained">Reset password</Button>
       </Box>
     </Card>
   );
