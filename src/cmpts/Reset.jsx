@@ -32,11 +32,11 @@ const Reset = ({setr}) => {
   const submit = () => {
     if (values.password.length < 5 || values.confirmpassword.length < 5) {
         setError("password length too short")
-    } else if (values.password != values.confirmpassword) {
+    } else if (values.password !== values.confirmpassword) {
         setError("password dont match")
     } else {
-        const url=`https://peace-hotel-app.herokuapp.com/user/passwordreset/${id}`
-        axios.get(url).then((res)=>{
+        const url=`http://peace-hotel-app.herokuapp.com/user/passwordreset/${id}`
+        axios.post(url,{'password':values.password}).then((res)=>{
             console.log(res)
             setError()
             setr(true)

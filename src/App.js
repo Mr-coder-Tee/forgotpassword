@@ -12,7 +12,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Navigate to={`/resetpassword/1`} replace={true}/>}/>
       {/* <Route   path="/" element={<Reset />}/> */}
-      <Route exact path="/resetpassword/:id" element={<Reset />} />
+      <Route  path="/resetpassword/:id" element={<Reset />} />
       </Routes>
     </div>
     </BrowserRouter>
@@ -20,3 +20,4 @@ function App() {
 }
 
 export default App;
+//62216e3f991fe8a1caec1e4c
