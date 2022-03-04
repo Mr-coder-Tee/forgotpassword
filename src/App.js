@@ -11,12 +11,9 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <Routes>
-      <Route path="/" element={<Navigate to={`resetpassword/`} replace={true}/>}/>
-      {/* <Route  path="/resetpassword" element={<Reset />} /> */}
-      <Route  path="/resetpassword"  >
-      <Route  path="/:id" element={<Reset />} />
-        
-        </Route>
+      <Route path="/" element={<Navigate to={`/resetpassword/*`} replace={true}/>}/>
+      <Route  path="/resetpassword" element={<Reset />} />
+     
 
       </Routes>
     </div>
