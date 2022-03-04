@@ -7,17 +7,16 @@ function App() {
   // const location = useLocation();
   // const path = location.pathname;
 // console.log('path',path)
+const [r,setr]=useState(false)
   return (
    
-    <BrowserRouter>
     <div className="App">
-      <Routes>
-      {/* <Route path="/" element={<Navigate to="/resetpassword" replace={true}/>}/> */}
-      <Route   path="/" element={<Reset />}/>
-      <Route path="/resetpassword" element={<Reset />} />
-      </Routes>
+     {
+       r?(<div>
+         <h1>Password reseted</h1>
+       </div>):(<Reset setr={setr}/>)
+     }
     </div>
-    </BrowserRouter>
   );
 }
 

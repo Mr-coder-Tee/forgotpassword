@@ -31,6 +31,7 @@ const Reset = () => {
     } else {
         const url="https://peace-hotel-app.herokuapp.com/"
         setError()
+        setr(true)
     }
   };
   const handleClickShowPassword = () => {
