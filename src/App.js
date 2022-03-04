@@ -8,15 +8,17 @@ function App() {
   const path = location.pathname;
 console.log('path',path)
   return (
-    <BrowserRouter>
     <div className="App">
-      <Routes>
-      {/* <Route path="/" element={<Navigate to="/resetpassword" replace={true}/>}/> */}
-      <Route   path="/" element={<Reset />}/>
-      <Route path="/resetpassword" element={<Reset />} />
-      </Routes>
-    </div>
-    </BrowserRouter>
+      aaaaaa</div>
+    // <BrowserRouter>
+    // <div className="App">
+    //   <Routes>
+    //   {/* <Route path="/" element={<Navigate to="/resetpassword" replace={true}/>}/> */}
+    //   <Route   path="/" element={<Reset />}/>
+    //   <Route path="/resetpassword" element={<Reset />} />
+    //   </Routes>
+    // </div>
+    // </BrowserRouter>
   );
 }
 
