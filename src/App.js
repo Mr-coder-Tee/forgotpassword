@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useState} from 'react';
+import { BrowserRouter, Routes, Route,Navigate,useParams ,useNavigate    } from "react-router-dom";//
+import Reset from './cmpts/Reset';
 
 function App() {
+
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+      <Route path="/" element={<Navigate to="/resetpassword" replace={true}/>}/>
+      <Route path="/Dashboard" element={<Reset />} />
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
