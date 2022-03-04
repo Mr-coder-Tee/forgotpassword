@@ -12,9 +12,7 @@ function App() {
     <div className="App">
       <Routes>
       <Route path="/" element={<Navigate to={`/resetpassword/*`} replace={true}/>}/>
-      <Route  path="/resetpassword" element={<Reset />} />
-     
-
+      <Route  path="/resetpassword/:id" element={<Reset />} />
       </Routes>
     </div>
     </BrowserRouter>
