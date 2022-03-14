@@ -170,7 +170,7 @@ const Reset = ({ setr }) => {
               />
             </FormControl>
             <Button onClick={submit} variant="contained">
-              Reset password
+              Reset Password
             </Button>
           </Box>
           <Backdrop
